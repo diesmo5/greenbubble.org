@@ -11,6 +11,12 @@ body {
     height: 100vh;
 }
 
+#hero-text {
+    position: relative;
+    color: #ffffff;
+    top: 40%;
+}
+
 #contact{
     background-image: url(/contact.jpg);
     background-position: center;
