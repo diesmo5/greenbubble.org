@@ -1,0 +1,29 @@
+{{ define "main" }}
+<div class="py-5"></div>
+
+<section id="header" class="py-5">
+  <div class="container text-center">
+    <h1 class="font-weight-bold">Global Partnerships</h1>
+    <h5 class="font-weight-light text-center">
+      Green Bubble International partners with local communities, school clubs,
+      and non-profit organizations
+    </h5>
+  </div>
+</section>
+
+<section id="content" class="container py-5">
+  <h2 class="font-weight-bold">How it Works:</h2>
+  {{ range $.Site.Data.join.steps }}
+    <h4 class="pl-lg-5 pl-md-5 py-1">Step {{.number}} - {{.text}}</h4>
+  {{ end }}
+</section>
+
+<section id="contact" class="py-5 text-center">
+  <h2 class="font-weight-normal">
+    Contact
+    <a href="info@greenbubble.org" class="text-success">
+      info@greenbubble.org
+    </a>
+  </h2>
+</section>
+{{ end }}

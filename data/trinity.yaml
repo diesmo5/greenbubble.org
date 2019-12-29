@@ -1,0 +1,14 @@
+card 1:
+  icon: fas fa-leaf fa-3x
+  header: Keeping Green
+  text: For over a decade, Green Bubble International has made efforts towards keeping cities green by helping people reduce, reuse, and recycle.
+
+card 2:
+  icon: fas fa-globe-americas fa-3x
+  header: Global Impact
+  text: Bubbles have formed in neighborhoods around the world via local communities and school clubs who have the same goals in preserving the environment.
+
+card 3:
+  icon: fas fa-hand-holding-heart fa-3x
+  header: Partnerships
+  text: Green Bubble has made strides in preserving the environment by making long-lasting and meaningful partnerships.

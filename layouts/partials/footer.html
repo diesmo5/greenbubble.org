@@ -1,0 +1,25 @@
+<section id="footer" class="py-4">
+  <footer class="container">
+    <div class="row">
+      <div class="col-3">
+        <a href="/" class="text-decoration-none">
+          <img src="/logo.jpg" alt="" class="w-100" />
+        </a>
+      </div>
+      <div class="col-9 justify-content-end text-right m-auto">
+        <div class="row">
+          {{range $.Site.Data.footer}}
+          <div class="col-3">
+            <a href="{{.url}}" class="text-small text-dark px-1">{{.title}}</a>
+          </div>
+          {{end}}
+          <div class="col-6">
+            <a href="" class="text-small text-dark text-decoration-none px-1">
+              &copy; Green Bubble, Int. 2008-2019
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+</section>

@@ -1,0 +1,126 @@
+{{ define "main" }}
+
+<section id="hero" class="text-center">
+  <!-- <img
+    src="/cover.jpg"
+    alt=""
+    class="w-100"
+  />  -->
+  <div id="hero-text">
+    <h1 class="font-weight-bold display-1">Green Bubble <br> International</h1>
+    <h2 class="font-weight-bold">Keeping our Bubbles Green</h2>
+  </div>
+</section>
+
+<section id="trinity" class="py-5">
+  <div class="container">
+    <div class="row">
+      {{ range $.Site.Data.trinity }}
+      <div class="col-lg-4 col-md-4 col-12 text-center">
+        <i class="{{.icon}} text-success"></i>
+        <h4 class="font-weight-bold text-blue pt-3 ob-2">{{.header}}</h4>
+        <p class="font-weight-light">
+          {{.text}}
+        </p>
+      </div>
+      {{ end }}
+    </div>
+  </div>
+</section>
+
+<section id="about" class="py-5 bg-blue">
+  <div class="container">
+    <div class="row">
+      {{ range $.Site.Data.about}}
+      <div class="col-lg-6 col-md-6 col-12 text-white m-auto">
+        <h2 class="font-weight-bold">
+          {{.header}}
+        </h2>
+        <h6 class="font-weight-light py-3">
+          {{.text}}
+        </h6>
+        <a href="" class="btn btn-lg btn-green font-weight-bold rounded-0 px-5"
+          >JOIN NOW</a
+        >
+      </div>
+      <div class="col-lg-6 col-md-6 col-12 m-auto">
+        <img
+          src="{{.media}}"
+          alt=""
+          class="w-100"
+        />
+        {{ end }}
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="team" class="py-5">
+  <div class="container py-5">
+    <h1 class="font-weight-bold text-blue text-center pb-5">
+      Meet the Team
+    </h1>
+    <div class="row pt-5">
+      {{ range $.Site.Data.team }}
+      <div class="col-lg-3 col-md-3 col-6 text-center">
+        <img src="{{.profile}}" alt="" class="w-100 rounded" />
+        <h3 class="font-weight-bold text-blue py-2">{{.name}}</h3>
+        <h6 class="font-weight-bold text-success">{{.title}}</h6>
+      </div>
+      {{ end }}
+    </div>
+  </div>
+</section>
+
+<section
+  id="contact"
+  class="py-5"
+>
+  <div class="container pb-5">
+    <div class="text-white">
+      <h1 class="font-weight-bold text-center text-uppercase">Talk to Us</h1>
+    </div>
+    <form name="contact" method="POST" data-netlify="true">
+      <p>
+        <label for="name" class="text-white">Name</label>
+        <input
+          class="bg-white text-white p-2 btn-block border-dark"
+          type="text"
+          name="name"
+        />
+      </p>
+      <p>
+        <label for="email" class="text-white">E-Mail Address</label>
+        <input
+          class="bg-white text-white p-2 btn-block border-dark"
+          type="email"
+          name="email"
+        />
+      </p>
+      <p>
+        <label for="subject" class="text-white">Subject</label>
+        <input
+          class="bg-white text-white p-2 btn-block border-dark"
+          type="text"
+          name="subject"
+        />
+      </p>
+      <p>
+        <label for="message" class="text-white">Message</label>
+        <textarea
+          class="bg-white text-white p-2 btn-block border-dark"
+          type="text"
+          name="message"
+        ></textarea>
+      </p>
+      <button
+        class="btn btn-lg btn-green rounded-0 font-weight-bold px-5"
+        type="submit"
+      >
+        Send
+      </button>
+    </form>
+  </div>
+</section>
+
+{{ end }}
